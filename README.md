@@ -76,6 +76,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 - GitHub: [@alexander16108](https://github.com/alexander16108)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- Instagram: [@codingRex](https://www.instagram.com/codingrex)
 - LinkedIn: [@alexanderodufuye](https://linkedin.com/in/linkedinhandle)
 
 
