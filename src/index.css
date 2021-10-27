@@ -19,10 +19,6 @@
   display: flex;
 }
 
-.calc-greyBtn2 .calc-btn1 {
-  width: 100%;
-}
-
 .calc-btn,
 .calc-btn1,
 .calc-btn2 {
@@ -32,6 +28,10 @@
   margin: 1px;
   text-align: center;
   font-size: 25px;
+}
+
+.calc-greyBtn2 .calc-btn1 {
+  width: 100%;
 }
 
 .orange-btn {
