@@ -20,8 +20,8 @@ class Calculator extends React.Component {
     let display = '0';
     const { calcObj } = this.state;
 
-    if (Object.keys(calcObj).length === 0 || (calcObj.total == null
-      && calcObj.next == null && calcObj.operation == null)) {
+    if (Object.keys(calcObj).length === 0 || (calcObj.total === null
+      && calcObj.next === null && calcObj.operation === null)) {
       display = '0';
     } else {
       display = calcObj.next != null ? calcObj.next
