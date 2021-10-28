@@ -6,7 +6,10 @@
 
 ![image](https://user-images.githubusercontent.com/60612329/139086580-b3164792-5d68-4de5-8c81-ccd6d33a1d2c.png)
 
-Additional description about the project and its features.
+<p align="center">Additional description about the project and its features.</p>
+
+<br/>
+<br/>
 
 ## Built With
 
