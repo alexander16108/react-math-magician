@@ -19,18 +19,18 @@
   display: flex;
 }
 
-.calc-btn,
-.calc-btn1,
-.calc-btn2 {
-  width: 157px;
+button {
+  width: 160px;
   padding: 40px;
   background-color: #e0e0e0;
   margin: 1px;
   text-align: center;
   font-size: 25px;
+  border: none;
+  cursor: pointer;
 }
 
-.calc-greyBtn2 .calc-btn1 {
+.calc-greyBtn2 button {
   width: 100%;
 }
 
@@ -41,6 +41,6 @@
   text-align: center;
 }
 
-.orange-btn .calc-btn {
+.orange-btn button {
   background-color: #f5913e;
 }
