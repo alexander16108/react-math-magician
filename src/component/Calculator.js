@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import calculate from '../logic/calculate';
-import Buttons from './buttons';
+import Buttons from './buttonsEvent';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -13,24 +13,26 @@ class Calculator extends React.Component {
   }
 
   click(calcObj, text) {
-    this.setState((calcObj) => calculate(calcObj, text));
+    this.setState({ calcObj: calculate(calcObj, text) });
   }
 
   render() {
-    let display = '0';
     const { calcObj } = this.state;
-
-    if (Object.keys(calcObj).length === 0 || (calcObj.total === null
-      && calcObj.next === null && calcObj.operation === null)) {
-      display = '0';
+    let contentDisplay = '0';
+    if (Object.keys(calcObj).length === 0
+      || (calcObj.total === null
+        && calcObj.next === null
+        && calcObj.operation === null)) {
+      contentDisplay = '0';
     } else {
-      display = calcObj.next != null ? calcObj.next
-        : calcObj.next != null ? calcObj.total : calcObj.operation;
+      contentDisplay = calcObj.next != null ? calcObj.next
+        : calcObj.next != null ? calcObj.total
+          : calcObj.operation;
     }
 
     return (
       <div className="calc-container">
-        <div className="calc-firstDisplay">{ display }</div>
+        <div className="calc-firstDisplay">{contentDisplay}</div>
         <div className="calc-Btns">
           <div className="calc-greyBtns">
             <div className="calc-greyBtn1">
