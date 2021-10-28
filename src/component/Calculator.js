@@ -30,7 +30,7 @@ class Calculator extends React.Component {
 
     return (
       <div className="calc-container">
-        <div className="calc-firstDisplay">{display}</div>
+        <div className="calc-firstDisplay">{ display }</div>
         <div className="calc-Btns">
           <div className="calc-greyBtns">
             <div className="calc-greyBtn1">
