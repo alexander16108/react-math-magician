@@ -7,7 +7,7 @@ import Buttons from './buttonsEvent';
 const calculator = () => {
   const [calcObj, setState] = useState({ total: 0, next: null, operation: null });
 
-  const renderClickable = (calcObj, text) => {
+  const click = (calcObj, text) => {
     setState({ calcObj: calculate(calcObj, text) });
   };
 
@@ -20,7 +20,9 @@ const calculator = () => {
   ) {
     contentDisplay = '0';
   } else {
-    contentDisplay = calcObj.next != null ? calcObj.next : calcObj.total;
+    contentDisplay = calcObj.next != null ? calcObj.next
+      : calcObj.next != null ? calcObj.total
+        : calcObj.operation;
   }
 
   return (
@@ -29,31 +31,31 @@ const calculator = () => {
       <div className="calc-Btns">
         <div className="calc-greyBtns">
           <div className="calc-greyBtn1">
-            <Buttons text="AC" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="+/-" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="%" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="7" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="8" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="9" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="4" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="5" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="6" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="1" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="2" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="3" Obj={calcObj} onClick={renderClickable} />
+            <Buttons text="AC" Obj={calcObj} onClick={click} />
+            <Buttons text="+/-" Obj={calcObj} onClick={click} />
+            <Buttons text="%" Obj={calcObj} onClick={click} />
+            <Buttons text="7" Obj={calcObj} onClick={click} />
+            <Buttons text="8" Obj={calcObj} onClick={click} />
+            <Buttons text="9" Obj={calcObj} onClick={click} />
+            <Buttons text="4" Obj={calcObj} onClick={click} />
+            <Buttons text="5" Obj={calcObj} onClick={click} />
+            <Buttons text="6" Obj={calcObj} onClick={click} />
+            <Buttons text="1" Obj={calcObj} onClick={click} />
+            <Buttons text="2" Obj={calcObj} onClick={click} />
+            <Buttons text="3" Obj={calcObj} onClick={click} />
           </div>
           <div className="calc-greyBtn2">
-            <Buttons text="0" Obj={calcObj} onClick={renderClickable} />
-            <Buttons text="." Obj={calcObj} onClick={renderClickable} />
+            <Buttons text="0" Obj={calcObj} onClick={click} />
+            <Buttons text="." Obj={calcObj} onClick={click} />
           </div>
         </div>
 
         <div className="orange-btn">
-          <Buttons text="/" Obj={calcObj} onClick={renderClickable} />
-          <Buttons text="*" Obj={calcObj} onClick={renderClickable} />
-          <Buttons text="-" Obj={calcObj} onClick={renderClickable} />
-          <Buttons text="+" Obj={calcObj} onClick={renderClickable} />
-          <Buttons text="=" Obj={calcObj} onClick={renderClickable} />
+          <Buttons text="/" Obj={calcObj} onClick={click} />
+          <Buttons text="*" Obj={calcObj} onClick={click} />
+          <Buttons text="-" Obj={calcObj} onClick={click} />
+          <Buttons text="+" Obj={calcObj} onClick={click} />
+          <Buttons text="=" Obj={calcObj} onClick={click} />
         </div>
       </div>
     </div>

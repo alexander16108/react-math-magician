@@ -6,10 +6,10 @@ export default class Buttons extends React.Component {
     super(props);
     this.state = {};
 
-    this.renderClicks = this.renderClicks.bind(this);
+    this.click = this.click.bind(this);
   }
 
-  renderClicks() {
+  click() {
     const { text, onClick, Obj } = this.props;
     onClick(Obj, text);
   }
@@ -18,7 +18,7 @@ export default class Buttons extends React.Component {
     const { text } = this.props;
 
     return (
-      <button type="button" className="calc-btn" onClick={this.renderClicks}>{text}</button>
+      <button type="button" className="calc-btn">{text}</button>
     );
   }
 }
